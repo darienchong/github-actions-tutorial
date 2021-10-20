@@ -25,6 +25,6 @@ public class PrimeCheckerTest {
 		// Common edge cases for primality:
 		assertFalse(PrimeChecker.isPrime(0));
 		assertFalse(PrimeChecker.isPrime(1));
-		assertFalse(PrimeChecker.isPrime(2));
+		assertTrue(PrimeChecker.isPrime(2));
 	}
 }
