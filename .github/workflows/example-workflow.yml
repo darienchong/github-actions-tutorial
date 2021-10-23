@@ -29,6 +29,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 8
+          distribution: 'zulu' # Zulu supports JavaFX, which Evosuite uses.
+          java-package: 'jdk+fx'
       
       # Run tests with Maven
       - name: Run tests with Maven
