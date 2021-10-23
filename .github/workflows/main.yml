@@ -24,12 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - name: Setup JDK8 
         uses: actions/setup-java@v2
         with:
           java-version: 8
-      
+          distribution: 'zulu' # Zulu supports JavaFX, which Evosuite uses.
+          java-package: 'jdk+fx'
+
       # Run tests with Maven
       - name: Run tests with Maven
         run: mvn clean test
